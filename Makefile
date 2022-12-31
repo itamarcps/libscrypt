@@ -7,8 +7,8 @@ INSTALL_DATA ?= install
 CC?=gcc
 CFLAGS?=$(CFLAGS_EXTRA) -D_FORTIFY_SOURCE=2 -fPIC
 LDFLAGS?=$(LDFLAGS_EXTRA) -Wl,-soname,libscrypt.so.0 -Wl,--version-script=libscrypt.version
-CFLAGS_EXTRA?=-Wl,-rpath=. -O2 -Wall -g -fstack-protector
-LDFLAGS_EXTRA?=-Wl,-z,relro
+CFLAGS_EXTRA?=-O2 -Wall -g -fstack-protector
+LDFLAGS_EXTRA?=
 
 all: reference
 
